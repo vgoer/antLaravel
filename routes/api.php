@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+// 用户登录路由
+Route::prefix('user')->controller(App\Http\Controllers\UserController::class)->group(function(){
+
+    Route::get('/login','login');
+
 });
