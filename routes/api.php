@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,14 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 // 后台路由
 Route::group(['namespace'=> 'Admin'],function(){
-
     // 用户登录路由
     Route::get('/user/login','UserController@login');
 
 
-    
+
 
 });

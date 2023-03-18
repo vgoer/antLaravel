@@ -44,7 +44,7 @@ require __DIR__.'/../vendor/autoload.php';
 |
 */
 
-// 跨域请求
+// 开发添加请求跨域
 header("Access-Control-Allow-Origin:*");
 header('Access-Control-Allow-Methods:POST,GET,OPTIONS,DELETE');
 
