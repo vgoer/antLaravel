@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// 前台路由
+Route::group(['namespace'=>'Home'],function(){
+
+    Route::get('/','IndexController@index');
+    Route::get('about','IndexController@about');
+    Route::get('content','IndexController@content');
+
+    // blogs
+    Route::get('/blogs/create','BlogController@create');
+    Route::post('/blogs/update','BlogController@store');
 });

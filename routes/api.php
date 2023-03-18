@@ -15,9 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-// 用户登录路由
-Route::prefix('user')->controller(App\Http\Controllers\UserController::class)->group(function(){
+// 后台路由
+Route::group(['namespace'=> 'Admin'],function(){
 
-    Route::get('/login','login');
+    // 用户登录路由
+    Route::get('/user/login','UserController@login');
+
+
+    
 
 });
