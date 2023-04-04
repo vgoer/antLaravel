@@ -14,6 +14,8 @@ class UserController extends Controller
 
         $param = $request->all();
 
+        res_json(1,'yes',$param['username']);
+
         $userModel = new User();
         $userModel->name      = $param['username'];
         $userModel->email     = $param['email'];
@@ -25,4 +27,20 @@ class UserController extends Controller
         }
         res_json();
     }
+
+
+
+    // z注册
+    public function reg(Request $request)
+    {
+
+        $params = $request->all();
+
+
+        dd($params);
+
+
+    }
 }
+
+
